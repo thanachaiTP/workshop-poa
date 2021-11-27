@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  poa:
+    container_name: rpc
+    image: ethereum/client-go:v1.10.12
+    restart: always
+    working_dir: /poa
+    hostname: rpc
+    volumes:
+      - $PWD:/poa
+    ports:
+      - 30333:30333
+      - 8545:8545
+      - 8546:8546
+    command: |
+      --networkid 39
+      --syncmode "full"
+      --gcmode "archive"
+      --miner.gasprice 10000000000
+      --miner.gastarget 20000000
+      --miner.gaslimit 20000000
+      --nat extip:139.59.126.43
+      --datadir "node"
+      --nousb
+      --http --http.addr "0.0.0.0" --http.port 8545 --http.corsdomain "*" --http.vhosts "*" --http.api "debug,eth,net,web3,txpool"
+      --ws --ws.addr "0.0.0.0" --ws.port 8546 --ws.origins "*" --ws.api "net,web3,eth"
+      --port 30333
+      --bootnodes "enode://4ee9c6bad27ac8db1e8bd044378bf0197a5b4c0a95358e4982ba47fd368f46a0ece0c45e358b67b81823cf4c7ecab134315ce89fc0465709908f9e119869b39e@128.199.102.108:30333"
+
+
+
+
