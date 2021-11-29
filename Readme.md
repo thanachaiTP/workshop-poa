@@ -72,10 +72,19 @@ copy Public address of the key ใส่ใน docker-compose.yaml ในบร�
 |Remoce Signer      | > clique.propose("0xd881234E73223d1623E0d56789942eA1c0B67890", false) |
 |Check Vote         | > clique.proposals                                                    |
 
-1 command-line
+command-line สำหรับ get enode
 ```
 # docker exec -it validator geth --datadir /poa/node attach --exec 'admin.nodeInfo'
 ```
+command-line สำหรับ add validator
+```
+# docker exec -it validator geth --datadir /poa/node attach --exec 'clique.propose("0x048F519b032bAfa19Cf28D0cbf717a5fd119fA7A", true)'
+```
+command-line สำหรับ check validator
+```
+# docker exec -it validator geth --datadir /poa/node attach --exec 'clique.getSigners()'
+```
+
 # หากต้องการ reset data เพื่อทำการ join ใหม่
 ## 7. removedb
 ```
