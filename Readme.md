@@ -89,7 +89,6 @@ command-line สำหรับ check validator
 ## 7. removedb
 ```
 # docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.12 --datadir /poa/node --nousb --password password.txt removedb
-# ./remove-db.sh
 ```
 และให้ทำการ init genesis ใหม่อีกครั้งก่อนการ deploy
 ```
