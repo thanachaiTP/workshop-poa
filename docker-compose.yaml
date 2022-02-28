@@ -25,7 +25,7 @@ services:
       --http --http.addr "0.0.0.0" --http.port 8545 --http.corsdomain "*" --http.vhosts "*" --http.api "debug,eth,net,web3,txpool"
       --ws --ws.addr "0.0.0.0" --ws.port 8546 --ws.origins "*" --ws.api "net,web3,eth"
       --port 30333
-      --bootnodes "enode://4ee9c6bad27ac8db1e8bd044378bf0197a5b4c0a95358e4982ba47fd368f46a0ece0c45e358b67b81823cf4c7ecab134315ce89fc0465709908f9e119869b39e@128.199.102.108:30333"
+      --bootnodes ""
 
 
 
