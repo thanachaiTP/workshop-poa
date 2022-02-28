@@ -37,12 +37,12 @@
 ## 2. create new account
 copy Public address of the key ใส่ใน docker-compose.yaml ในบรรทัด unlock
 ```
-# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.12 --datadir /poa/node --password password.txt  account new
+# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.16 --datadir /poa/node --password password.txt  account new
 ```
 
 ## 3. init-genesis
 ```
-# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.12 --datadir /poa/node --nousb --password password.txt init genesis.json
+# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.16 --datadir /poa/node --nousb --password password.txt init genesis.json
 ```
 
 
