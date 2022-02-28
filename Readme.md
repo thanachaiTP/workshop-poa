@@ -42,7 +42,7 @@ copy Public address of the key ใส่ใน docker-compose.yaml ในบร�
 
 ## 3. init-genesis
 ```
-# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.16 --datadir /poa/node --nousb --password password.txt init genesis.json
+# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.16 --datadir /poa/node --nousb  init genesis.json
 ```
 
 
@@ -88,10 +88,10 @@ command-line สำหรับ check validator
 # หากต้องการ reset data เพื่อทำการ join ใหม่
 ## 7. removedb
 ```
-# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.16 --datadir /poa/node --nousb --password password.txt removedb
+# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.16 --datadir /poa/node --nousb  removedb
 ```
 และให้ทำการ init genesis ใหม่อีกครั้งก่อนการ deploy
 ```
-# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.16 --datadir /poa/node --nousb --password password.txt init genesis.json
+# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.16 --datadir /poa/node --nousb  init genesis.json
 ```
 
