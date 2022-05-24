@@ -2,7 +2,7 @@ version: '3.8'
 services:
   poa:
     container_name: rpc
-    image: ethereum/client-go:v1.10.16
+    image: ethereum/client-go:v1.10.17
     restart: always
     working_dir: /poa
     hostname: rpc
@@ -26,7 +26,8 @@ services:
       --ws --ws.addr "0.0.0.0" --ws.port 8546 --ws.origins "*" --ws.api "net,web3,eth"
       --port 30333
       --bootnodes ""
-
-
-
-
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1g"
+        max-file: "1"
