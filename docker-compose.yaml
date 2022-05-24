@@ -23,8 +23,9 @@ services:
       --password password.txt
       --unlock 0x834656C1b6D0C43823D546CBC1BB547fE50Dc57d
       --port 30333
-      --bootnodes "enode://4ee9c6bad27ac8db1e8bd044378bf0197a5b4c0a95358e4982ba47fd368f46a0ece0c45e358b67b81823cf4c7ecab134315ce89fc0465709908f9e119869b39e@128.199.102.108:30333"
-
-
-
-
+      --bootnodes ""
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1g"
+        max-file: "1"
