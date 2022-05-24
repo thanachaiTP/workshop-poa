@@ -14,7 +14,7 @@
 |---------------|-------------------|
 |docker         | 20.10.6 or higher |
 |docker-compose | 1.29.1 or higher  |
-|geth  | ethereum/client-go:v1.10.12 |
+|geth  | ethereum/client-go:v1.10.17 |
 
 # Install docker and docker-compose
 ```
@@ -37,12 +37,12 @@
 ## 2. create new account
 copy Public address of the key ใส่ใน docker-compose.yaml ในบรรทัด unlock
 ```
-# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.16 --datadir /poa/node --password password.txt  account new
+# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.17 --datadir /poa/node --password password.txt  account new
 ```
 
 ## 3. init-genesis
 ```
-# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.16 --datadir /poa/node --nousb  init genesis.json
+# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.17 --datadir /poa/node --nousb  init genesis.json
 ```
 
 
@@ -88,10 +88,10 @@ command-line สำหรับ check validator
 # หากต้องการ reset data เพื่อทำการ join ใหม่
 ## 7. removedb
 ```
-# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.16 --datadir /poa/node --nousb  removedb
+# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.17 --datadir /poa/node --nousb  removedb
 ```
 และให้ทำการ init genesis ใหม่อีกครั้งก่อนการ deploy
 ```
-# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.16 --datadir /poa/node --nousb  init genesis.json
+# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.17 --datadir /poa/node --nousb  init genesis.json
 ```
 
