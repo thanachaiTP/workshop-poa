@@ -31,7 +31,7 @@
 
 ## 2. init-genesis
 ```
-# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.12 --datadir /poa/node --nousb init genesis.json
+# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.17 --datadir /poa/node --nousb init genesis.json
 ```
 
 
@@ -68,10 +68,10 @@
 # หากต้องการ reset data เพื่อทำการ join ใหม่
 ## 7. removedb
 ```
-# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.12 --datadir /poa/node --nousb  removedb
+# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.17 --datadir /poa/node --nousb  removedb
 ```
 และให้ทำการ init genesis ใหม่อีกครั้งก่อนการ deploy
 ```
-# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.12 --datadir /poa/node --nousb init genesis.json
+# docker run --rm -it -v $PWD:/poa -w /poa ethereum/client-go:v1.10.17 --datadir /poa/node --nousb init genesis.json
 ```
 
