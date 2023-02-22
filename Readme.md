@@ -71,6 +71,7 @@ copy Public address of the key ใส่ใน docker-compose.yaml ในบร�
 |Add Singer         | > clique.propose("0xd881234E73223d1623E0d56789942eA1c0B67890", true)  |
 |Remoce Signer      | > clique.propose("0xd881234E73223d1623E0d56789942eA1c0B67890", false) |
 |Check Vote         | > clique.proposals                                                    |
+|Check Vote         | > clique.status()                                                    |
 
 command-line สำหรับ get enode
 ```
